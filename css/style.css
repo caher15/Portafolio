@@ -352,22 +352,24 @@ position: fixed;
     font-weight: 600;
 }
 
-/* Gradientes */
 .email{
-    background: linear-gradient(135deg, #0f2b5b, #142f63);
+  background: linear-gradient(178deg, #073465, #0e2742);
+    /* background: linear-gradient(135deg, #0f2b5b, #142f63); */
 }
 .leetcode-icon{
-    width: 34px;
-    height: 34px;
-    object-fit: contain;
-    filter: invert(1); /* makes it white for dark backgrounds */
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: invert(1); /* makes it white for dark backgrounds */
 }
 .leetcode{
-    background: linear-gradient(135deg, #f89f1b, #f97316);
+  background: linear-gradient(175deg, #0d2844, #12273c);
+    /* background: linear-gradient(135deg, #f89f1b, #f97316); */
 }
 
 .github{
-    background: linear-gradient(135deg, #1a1a1a, #000);
+    background: linear-gradient(180deg, #152332, #1e2124);
+    /* background: linear-gradient(135deg, #1a1a1a, #000); */
 }
 .main-projects-container{
   display: flex;
@@ -441,7 +443,7 @@ position: fixed;
 }
 .projects-title {
   font-family: 'Oxanium', cursive;
-  font-size: 2.2rem;  
+  font-size: 2.7rem;  
   color: #297A9B;     
 }
 .projects-title span {
@@ -481,6 +483,7 @@ position: fixed;
   flex-direction: column;
   justify-content: center;
   max-width: 600px;
+  padding: 10px;
 }
 .projects-card-info h3, .projects-card-info p {
   color: var(--off-white);
