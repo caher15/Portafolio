@@ -47,3 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   reveals.forEach(el => observer.observe(el));
 });
+/*==================== PROJECTS ANIMATION ====================*/
+
+const btn = document.querySelector(".projects-more-btn");
+const extra = document.querySelector(".projects-extra");
+
+btn.addEventListener("click", () => {
+  extra.classList.toggle("is-open");
+
+  btn.textContent = extra.classList.contains("is-open")
+    ? "View less projects"
+    : "View more projects";
+});
+extra.scrollIntoView({ behavior: "smooth" });

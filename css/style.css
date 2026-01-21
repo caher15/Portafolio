@@ -477,6 +477,7 @@ position: fixed;
 .main-projects-container .projects-card {
   width: 90%;
   background-color: #23272b;
+  margin-top: 10px;
 }
 .projects-card-info{
   display: flex;
@@ -507,8 +508,39 @@ position: fixed;
   opacity: 1;
   filter: contrast(120%);
 }
+.projects-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
 
+.projects-more-btn {
+  background-color: #ff8c1a;
+  color: #23272b;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+.projects-more-btn:hover {
+  background-color: #ffa94d;
+  transform: translateY(-2px);
+}
+.projects-extra {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.projects-extra.is-open {
+  max-height: 3000px; 
+  opacity: 1;
+}
 
 @media screen and (min-width: 768px){
     .header__logo {
