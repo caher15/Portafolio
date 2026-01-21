@@ -13,6 +13,7 @@
     --just-white: #FFFFFF; 
     --text-color: #58555E;
     --text-color-light: #A5A1AA;
+    --background-color: #0d1117;
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
     --normal-font-size: .938rem;
@@ -38,11 +39,11 @@ html{
 }
 
 .header {
-position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--off-white);
+  background-color: #2a7a9b;
   box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
   padding: 0 1rem;
   z-index: var(--z-fixed);
@@ -63,26 +64,21 @@ position: fixed;
 }
 
 .header__toggle {
-  color: var(--title-color);
+  color: var(--off-white);
   cursor: pointer;
 }
 /***************Main container*******************/
 .main-container{
     /* min-height: 100vh; */
     margin-top: var(--header-height);
-    background-color: #23272b;
+    background-color: var(--background-color);
 }
 .background{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-        160deg,
-        rgba(42, 123, 155, 1) 0%,
-        rgba(0, 59, 121, 1) 44%,
-        rgba(40, 38, 35, 1) 100%
-    );
+  background: linear-gradient(180deg, rgba(42, 123, 155, 1) 0%, rgba(0, 59, 121, 1) 44%, rgb(12 16 21) 100%);
 }
 /***************Nav*******************/
 .nav {
@@ -355,7 +351,7 @@ position: fixed;
 .email{
   color: var(--just-white);
   transition: all 0.3s ease;
-  background: linear-gradient(178deg, #073465, #0e2742);
+  background: linear-gradient(178deg, #032e5c, #051f3a);
     /* background: linear-gradient(135deg, #0f2b5b, #142f63); */
 }
 .email:hover{
@@ -371,7 +367,7 @@ position: fixed;
 .leetcode{
   color: var(--just-white);
   transition: all 0.3s ease;
-  background: linear-gradient(175deg, #0d2844, #12273c);
+  background: linear-gradient(180deg, #041e3a, #071524);
     /* background: linear-gradient(135deg, #f89f1b, #f97316); */
 }
 .leetcode:hover{
@@ -383,7 +379,7 @@ position: fixed;
 .github{
   color: var(--just-white);
   transition: all 0.3s ease;
-  background: linear-gradient(180deg, #152332, #1e2124);
+  background: linear-gradient(180deg, #071522, #090c10);
     /* background: linear-gradient(135deg, #1a1a1a, #000); */
 }
 .github:hover{
@@ -423,8 +419,8 @@ position: fixed;
     background: linear-gradient(
         98deg,
         transparent 0%,
-        #23272b 40%,
-        #23272b 60%,
+        var(--background-color) 40%,
+        var(--background-color) 60%,
         transparent 100%
     );
 
@@ -495,7 +491,7 @@ position: fixed;
 }
 .main-projects-container .projects-card {
   width: 90%;
-  background-color: #23272b;
+  background-color: transparent;
   margin-top: 10px;
 }
 .projects-card-info{
@@ -563,6 +559,16 @@ position: fixed;
 .projects-extra.is-open {
   max-height: 3000px; 
   opacity: 1;
+}
+
+.main-stacktech-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  margin-top: 35px;
 }
 
 @media screen and (min-width: 768px){
