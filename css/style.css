@@ -353,8 +353,14 @@ position: fixed;
 }
 
 .email{
+  color: var(--just-white);
+  transition: all 0.3s ease;
   background: linear-gradient(178deg, #073465, #0e2742);
     /* background: linear-gradient(135deg, #0f2b5b, #142f63); */
+}
+.email:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 153, 255, 0.6);;
 }
 .leetcode-icon{
   width: 34px;
@@ -363,13 +369,26 @@ position: fixed;
   filter: invert(1); /* makes it white for dark backgrounds */
 }
 .leetcode{
+  color: var(--just-white);
+  transition: all 0.3s ease;
   background: linear-gradient(175deg, #0d2844, #12273c);
     /* background: linear-gradient(135deg, #f89f1b, #f97316); */
 }
+.leetcode:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px #f97316;
+}
+
 
 .github{
-    background: linear-gradient(180deg, #152332, #1e2124);
+  color: var(--just-white);
+  transition: all 0.3s ease;
+  background: linear-gradient(180deg, #152332, #1e2124);
     /* background: linear-gradient(135deg, #1a1a1a, #000); */
+}
+.github:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(140, 82, 255, 0.6);;
 }
 .main-projects-container{
   display: flex;
@@ -515,7 +534,7 @@ position: fixed;
 }
 
 .projects-more-btn {
-  background-color: #ff8c1a;
+  background-color: #297A9B;
   color: #23272b;
   border: none;
   padding: 14px 32px;
@@ -527,10 +546,14 @@ position: fixed;
 }
 
 .projects-more-btn:hover {
-  background-color: #ffa94d;
+  background-color: var(--just-white);
   transform: translateY(-2px);
 }
 .projects-extra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.6s ease, opacity 0.4s ease;

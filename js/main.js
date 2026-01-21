@@ -59,4 +59,3 @@ btn.addEventListener("click", () => {
     ? "View less projects"
     : "View more projects";
 });
-extra.scrollIntoView({ behavior: "smooth" });
