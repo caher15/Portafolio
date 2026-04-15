@@ -59,3 +59,34 @@ btn.addEventListener("click", () => {
     ? "View less projects"
     : "View more projects";
 });
+/*==================== TEXT ANIMATION ====================*/
+function toggleText() {
+    let dots = document.getElementById("dots");
+    let moreText = document.getElementById("more");
+    let btn = document.getElementById("btnMore");
+
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        dots.style.display = "none";
+        btn.innerText = "less";
+    } else {
+        moreText.style.display = "none";
+        dots.style.display = "inline";
+        btn.innerText = "more...";
+    }
+}
+function toggleText2() {
+    let dots = document.getElementById("dots2");
+    let moreText = document.getElementById("more2");
+    let btn = document.getElementById("btnMore2");
+
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        dots.style.display = "none";
+        btn.innerText = "less";
+    } else {
+        moreText.style.display = "none";
+        dots.style.display = "inline";
+        btn.innerText = "more...";
+    }
+}

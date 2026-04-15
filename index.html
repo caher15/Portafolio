@@ -51,7 +51,7 @@
                             <h3 class="nav__subtitle">Menu</h3>
 
                             <!-- Link normal -->
-                            <a href="#" class="nav__link">
+                            <a href="#me" class="nav__link">
                                 <i class="bx bx-home nav__icon"></i>
                                 <span class="nav__name">Me</span>
                             </a>
@@ -66,16 +66,16 @@
 
                                 <div class="nav__dropdown-collapse">
                                     <div class="nav__dropdown-content">
-                                        <a href="#" class="nav__dropdown-item">Desk App</a>
-                                        <a href="#" class="nav__dropdown-item">Mobile App</a>
-                                        <a href="#" class="nav__dropdown-item">ERP</a>
-                                        <a href="#" class="nav__dropdown-item">Landing</a>
+                                        <a href="#desk" class="nav__dropdown-item">Desk App</a>
+                                        <a href="#mobile" class="nav__dropdown-item">Mobile App</a>
+                                        <a href="#inventory" class="nav__dropdown-item">Inventory</a>
+                                        <a href="#landing" class="nav__dropdown-item">Landing</a>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Otro link -->
-                            <a href="#" class="nav__link">
+                            <a href="#contact" class="nav__link">
                                 <i class="bx bx-user"></i>
                                 <span class="nav__name">Contact Info</span>
                             </a>
@@ -88,11 +88,13 @@
             </nav>
         </div>
         <section class="background">
-            <section class="main-info-container">
+            <section id="me" class="main-info-container">
                 <div class="info-avatar--img"></div>
                 <h2>Christopher Hdez.</h2>
                 <div class="info-intro--title">
                     <p>CS Engenering, Software Developer</p>
+                    <p>For Freelance Projects: </p>
+                    <p>christopher.her.98@gmail.com</p>
                     <p>📍<span class="location"></span>Mex. <span class="fi fi-mx"></span></p>
                 </div>
             </section>
@@ -105,12 +107,12 @@
 
                     <div class="card-info">
                         <h3>Email</h3>
-                        <p>caherdev@gmail.com</p>
+                        <p>christopher.her.98@gmail.com</p>
                     </div>
 
-                    <div class="card-link">
+                    <a href="mailto:christopher.her.98@gmail.com?subject=Contacto desde portafolio&body=Hola, me interesa tu trabajo" class="card-link">
                         <i class="bx bx-link-external"></i>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Facebook -->
@@ -126,9 +128,9 @@
                         <p>CaherDev</p>
                     </div>
 
-                    <div class="card-link">
+                    <a href="https://leetcode.com/u/MEYCW2gnVY/" class="card-link" target="_blank">
                         <i class="bx bx-link-external"></i>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- GitHub -->
@@ -142,11 +144,10 @@
                         <p>caher15</p>
                     </div>
 
-                    <button class="follow-btn">Follow</button>
 
-                    <div class="card-link">
+                    <a href="https://github.com/caher15" class="card-link" target="_blank">
                         <i class="bx bx-link-external"></i>
-                    </div>
+                    </a>
                 </div>
 
             </section>
@@ -157,31 +158,49 @@
             <h2 class="projects-title reveal js-reveal">
                 <span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span>
             </h2>
-            <div class="projects-card vidali-web">
+            <div id="inventory" class="projects-card vidali-web">
                 <div class="projects-card-info">
                     <h3>Vidali Web</h3>
-                    <p><b>ERP for Vidali Company </b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, at! Facere, optio neque enim fuga ipsa consequuntur libero necessitatibus, perferendis accusantium, deleniti hic tenetur corporis accusamus aut quis. Voluptas, neque!</p>
+                    <p>
+                        Designed, developed, and currently maintain (2024–present) an inventory management system for an SMB, improving control of products and raw materials through process automation and reduced operational errors
+                        <span id="dots">...</span>
+                        <span id="more" style="display: none;">
+                            . Built CRUD modules for suppliers, clients, and manufacturing orders (including product–ingredient relationships), enhancing traceability and production workflows. Integrated image management using Cloudinary and implemented an automatic unit conversion system (grams, kilograms, tons, milliliters, liters) to streamline daily operations. Technologies: HTML, CSS, JavaScript, PHP, Mustache, MySQL, and Cloudinary.
+                        </span>
+                    </p>
+
+                    <button onclick="toggleText()" id="btnMore" class="btn-more">more...</button>
                 </div>
             </div> 
             <div class="projects-card-carrusel">
-                <img src="./assets/img/1.jpg" alt="">
-                <img src="./assets/img/2.jpg" alt="">
-                <img src="./assets/img/3.jpg" alt="">
-                <img src="./assets/img/4.jpg" alt="">
+                <img src="./assets/img/vidali/1.png" alt="">
+                <img src="./assets/img/vidali/2.png" alt="">
+                <img src="./assets/img/vidali/3.png" alt="">
+                <img src="./assets/img/vidali/5.png" alt="">
                 
             </div>
             <div class="projects-card doctor-app">
-                <div class="projects-card-info">
+                <div id="desk" class="projects-card-info">
                     <h3>Podiastric Desk App</h3>
-                    <p><b>ERP for Vidali Company </b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, at! Facere, optio neque enim fuga ipsa consequuntur libero necessitatibus, perferendis accusantium, deleniti hic tenetur corporis accusamus aut quis. Voluptas, neque!</p>
+                    <p>
+                        Developed a Windows desktop application for a podiatry clinic, integrating specialized scanning hardware for real-time foot image capture and processing.
+                        <span id="dots2">...</span>
+                        <span id="more2" style="display: none;">
+                            The system includes custom-built measurement tools tailored to the client’s clinical requirements, along with advanced image filtering to enhance diagnostic analysis.
+                            Implemented a secure authentication system with two-factor verification, as well as patient management features to streamline clinical workflows. Integrated Cloudinary API for efficient image storage and management, and established connectivity with a custom-built web platform to synchronize and access data remotely.
+                            Technologies: Python (PyQt5, OpenCV, NumPy), SQLite, Cloudinary.
+                        </span>
+                    </p>
+
+                    <button onclick="toggleText2()" id="btnMore2" class="btn-more">more...</button>
                 </div>
             </div> 
 
             <div class="projects-card-carrusel">
-                <img src="./assets/img/1.jpg" alt="">
-                <img src="./assets/img/2.jpg" alt="">
-                <img src="./assets/img/3.jpg" alt="">
-                <img src="./assets/img/4.jpg" alt="">
+                <img src="./assets/img/podo/2.png" alt="">
+                <img src="./assets/img/podo/3.png" alt="">
+                <img src="./assets/img/podo/4.png" alt="">
+                <img src="./assets/img/podo/1.png" alt="">
                 
             </div>
             
@@ -194,36 +213,68 @@
             <div class="projects-extra">
                 <div class="projects-card doctor-app">
                 <div class="projects-card-info">
-                    <h3>Podiastric Desk App</h3>
-                    <p><b>ERP for Vidali Company </b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, at! Facere, optio neque enim fuga ipsa consequuntur libero necessitatibus, perferendis accusantium, deleniti hic tenetur corporis accusamus aut quis. Voluptas, neque!</p>
+                    <h3>Educa (PWA)</h3>
+                    <p>Developed a Progressive Web App (PWA) to enhance the teaching–learning process at CETI for Digital Systems courses, centralizing course materials into a single accessible platform. Designed to improve student engagement and usability, the platform received positive feedback from users and increased interaction with course content.</p>
+                    <a href="https://youtu.be/RZgr_lQQ5iI?si=W-ByYwc3l776fKOl" target="_blank" class="btn-link">▶ Watch Demo</a>
                 </div>
             </div> 
 
             <div class="projects-card-carrusel">
-                <img src="./assets/img/1.jpg" alt="">
-                <img src="./assets/img/2.jpg" alt="">
-                <img src="./assets/img/3.jpg" alt="">
-                <img src="./assets/img/4.jpg" alt="">
+                <img src="./assets/img/educa/1.png" alt="">
+                <img src="./assets/img/educa/2.png" alt="">
+                <img src="./assets/img/educa/3.png" alt="">
+                <img src="./assets/img/educa/4.png" alt="">
                 
             </div>
-            <div class="projects-card doctor-app">
+
+            <div id="mobile" class="projects-card doctor-app">
                 <div class="projects-card-info">
-                    <h3>Podiastric Desk App</h3>
-                    <p><b>ERP for Vidali Company </b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, at! Facere, optio neque enim fuga ipsa consequuntur libero necessitatibus, perferendis accusantium, deleniti hic tenetur corporis accusamus aut quis. Voluptas, neque!</p>
+                    <h3>Residential Mobile App</h3>
+                    <p>Developed a mobile application for a residential community to manage payments, share announcements, and provide resident services. Built with Flutter and Firebase, the app includes user authentication (login and registration) and is currently in beta, aiming to streamline communication and improve administrative processes within the community.</p>
                 </div>
             </div> 
-
+v
             <div class="projects-card-carrusel">
-                <img src="./assets/img/1.jpg" alt="">
-                <img src="./assets/img/2.jpg" alt="">
-                <img src="./assets/img/3.jpg" alt="">
-                <img src="./assets/img/4.jpg" alt="">
+                <img src="./assets/img/colinas/1.JPG" alt="">
+                <img src="./assets/img/colinas/2.jpeg" alt="">
+                <img src="./assets/img/colinas/3.jpeg" alt="">
+                <img src="./assets/img/colinas/4.jpeg" alt="">
+                
+            </div>
+
+            <div id="landing" class="projects-card doctor-app">
+                <div class="projects-card-info">
+                    <h3>Wedding Landing</h3>
+                    <p>Designed and developed a custom wedding invitation landing page as a freelance project, collaborating with a professional designer to deliver a polished and visually appealing user experience. Built using HTML, CSS, and JavaScript, the site features a responsive design and an interactive countdown timer, showcasing attention to detail and front-end development skills.</p>
+                </div>
+            </div> 
+v
+            <div class="projects-card-carrusel">
+                <img src="./assets/img/boda/1.png" alt="">
+                <img src="./assets/img/boda/2.png" alt="">
+                <img src="./assets/img/boda/3.png" alt="">
+                <img src="./assets/img/boda/4.png" alt="">
                 
             </div>
             </div>
         </section>
     </main>
-    <footer ></footer>
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            
+            <h3>Contact</h3>
+            
+            <p>Email: <a href="mailto:christopher.her.98@gmail.com">christopher.her.98@gmail.com</a></p>
+            <p>Location: Guadalajara, México</p>
+
+            <div class="footer-links">
+                <a href="https://github.com/caher15" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/christopher-undefined-411087386/" target="_blank">LinkedIn</a>
+            </div>
+
+            <p class="footer-copy">© 2026 Christopher Hernández. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="./js/main.js"></script>
 </body>
 </html>
