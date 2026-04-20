@@ -509,6 +509,31 @@ html{
 .projects-card-info h3, .projects-card-info p {
   color: var(--off-white);
 }
+.tech-list {
+    list-style: none; 
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.tech-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #c9d1d9;
+}
+
+.tech-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    background-color: #297A9B;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(41, 122, 155, 0.6); /* glow sutil */
+}
 .projects-card-carrusel{
   display: flex;
   width: 90%;

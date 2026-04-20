@@ -81,7 +81,7 @@ function toggleText2() {
     let btn = document.getElementById("btnMore2");
 
     if (moreText.style.display === "none") {
-        moreText.style.display = "inline";
+        moreText.style.display = "block";
         dots.style.display = "none";
         btn.innerText = "less";
     } else {
