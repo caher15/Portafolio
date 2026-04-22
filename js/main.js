@@ -1,19 +1,17 @@
 /*==================== SHOW NAVBAR ====================*/
-const showMenu = (headerToggle, navbarId) =>{
+const showMenu = (headerToggle, navbarId) => {
     const toggleBtn = document.getElementById(headerToggle),
-    nav = document.getElementById(navbarId)
+          nav = document.getElementById(navbarId)
     
-    // Validate that variables exist
-    if(headerToggle && navbarId){
-        toggleBtn.addEventListener('click', ()=>{
-            // We add the show-menu class to the div tag with the nav__menu class
+    if (toggleBtn && nav) {
+        toggleBtn.addEventListener('click', () => {
             nav.classList.toggle('show-menu')
-            // change icon
             toggleBtn.classList.toggle('bx-x')
         })
     }
 }
 showMenu('header-toggle','navbar')
+
 
 /*==================== LINK ACTIVE ====================*/
 const linkColor = document.querySelectorAll('.nav__link')
@@ -25,8 +23,25 @@ function colorLink(){
 
 linkColor.forEach(l => l.addEventListener('click', colorLink))
 
+const nav = document.getElementById("navbar");
+const toggleBtn = document.getElementById("header-toggle");
+
+const navLinks = document.querySelectorAll("#navbar a[href^='#']:not([href='#'])");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("show-menu");
+        toggleBtn.classList.remove("bx-x"); 
+    });
+});
 
 
+/*==================== DROPDOWN ====================*/
+document.querySelectorAll(".nav__dropdown > .nav__link").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault(); 
+    });
+});
 /*==================== REVEAL PROJECT TITTLE ====================*/
 document.addEventListener("DOMContentLoaded", () => {
   const reveals = document.querySelectorAll(".js-reveal");
@@ -90,3 +105,34 @@ function toggleText2() {
         btn.innerText = "more...";
     }
 }
+
+/*==================== CAROUSEL TOAST ====================*/
+
+const carousel = document.getElementById("carrusel");
+const toast = document.getElementById("toast-hint");
+const isMobile = window.innerWidth < 768;
+toast.innerText = isMobile 
+    ? "Tap the image " 
+    : "Click or hover the image ";
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            toast.classList.add("show");
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 4000);
+            observer.unobserve(carousel);
+        }
+    });
+}, {
+    threshold: 0.5 
+});
+
+observer.observe(carousel);
+
+document.querySelectorAll("#carrusel img").forEach(img => {
+    img.addEventListener("click", () => {
+        toast.classList.remove("show");
+    });
+});
