@@ -521,6 +521,11 @@ html{
 .projects-card-info h3, .projects-card-info p {
   color: var(--off-white);
 }
+.projects-card__tech-tittle{
+  margin-top: 10px;
+  font-size: var(--normal-font-size);
+  color: #c9d1d9;
+}
 .tech-list {
     list-style: none; 
     padding-left: 0;
@@ -531,7 +536,7 @@ html{
     position: relative;
     padding-left: 20px;
     margin-bottom: 6px;
-    font-size: 14px;
+    font-size: var(--normal-font-size);
     color: #c9d1d9;
 }
 
@@ -724,7 +729,18 @@ html{
 }
 /*=Laptop=*/
 @media screen and (min-width: 1140px){
-
+    .main-info-container{
+      flex-direction: row;
+      max-width: 85%;
+    }
+    .info-img-container{
+      flex: 1;
+      width: 50%;
+    }
+    .main-info-content{
+      flex-direction: column;
+      width: 50%;
+    }
     .main-socialmedia-container{
        max-width: 85%;
     }
